@@ -22,11 +22,16 @@ function geneconca()
 	liaison =' ' ;	
 
 	chaine123 = chaine1 + '' + chaine2 + '' + chaine3;
+	chaine132 = chaine1 + '' + chaine3 + '' + chaine2;
+	chaine213 = chaine2 + '' + chaine1 + '' + chaine3;
 	chaine231 = chaine2 + '' + chaine3 + '' + chaine1;
 	chaine312 = chaine3 + '' + chaine1 + '' + chaine2;
+	chaine321 = chaine3 + '' + chaine2 + '' + chaine1;
 
+	
 
-	document.forme.texte.value = chaine123 + ",\n" + chaine231 + ",\n" + chaine312;
+	document.forme.texte.value = chaine123 + ",\n" + chaine132 + ",\n"  + chaine213 + ",\n" +  chaine231 + ",\n" + chaine312 + ",\n" + chaine321 + ",";
+	
 	} ;
 
 </script>
@@ -35,7 +40,7 @@ function geneconca()
 
 <label for="zone_texte"><strong>Concaténation</strong></label><br><br>
 
-<textarea id="zone_texte" name="texte" cols="10" rows="5" wrap="hard"></textarea><br><br>			        
+<textarea id="zone_texte" name="texte" cols="20" rows="10" wrap="hard"></textarea><br><br>			        
 
 <label for="partie1">Partie 1</label>
 <label for="partie2">Partie 2</label>

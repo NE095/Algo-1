@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Concaténation</title>
+</head>
+
+<body>
+
+<script language="JavaScript" type="text/javascript">
+
+function geneconca()
+	{
+	chaine ='' ;
+	i = document.forme.conca1.selectedIndex ;
+	chaine1 = document.forme.conca1.options[i].value ;
+	i = document.forme.conca2.selectedIndex ;
+	chaine2 = document.forme.conca2.options[i].value ;
+	i = document.forme.conca3.selectedIndex ;
+	chaine3 = document.forme.conca3.options[i].value ;
+
+	liaison =' ' ;	
+
+	chaine123 = chaine1 + '' + chaine2 + '' + chaine3;
+	chaine231 = chaine2 + '' + chaine3 + '' + chaine1;
+	chaine312 = chaine3 + '' + chaine1 + '' + chaine2;
+
+
+	document.forme.texte.value = chaine123 + ",\n" + chaine231 + ",\n" + chaine312;
+	} ;
+
+</script>
+
+<form method="post" name="forme">
+
+<label for="zone_texte"><strong>Concaténation</strong></label><br><br>
+
+<textarea id="zone_texte" name="texte" cols="10" rows="5" wrap="hard"></textarea><br><br>			        
+
+<label for="partie1">Partie 1</label>
+<label for="partie2">Partie 2</label>
+<label for="partie3">Partie 3</label><br><br>
+
+<select id="partie1" name="conca1" size="4" onchange="geneconca()" >
+<option value="par">par</option>
+<option value="bis">bis</option>
+<option value="sot">sot</option>
+<option value="car">car</option>
+</select>
+			          
+<select id="partie2"  name="conca2" size="4" onchange="geneconca()">
+<option value="is">is</option>
+<option value="ul">ul</option>
+<option value="or">or</option>
+<option value="em">em</option>
+</select>
+		 
+<select id="partie3" name="conca3" size="4" onchange="geneconca()">
+<option value="iment">iment</option>
+<option value="er">er</option>
+<option value="al">al</option>
+<option value="ou">ou</option>
+</select>
+
+
+    
+</form>           
+      
+</body>
+</html>

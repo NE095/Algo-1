@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Controle de saisie</title>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+{
+
+nombre = 6
+
+while(nombre != -1 && nombre <= 20 && nombre >= 0)
+{
+	
+		document.write("Saisissez un nombre :"+"<br>"+"<br>");
+		nombre = (prompt());
+		document.write(nombre +"<br>"+"<br>");
+		if (nombre > 16)
+		{
+		alert("Attention cette valeur est trop élevé  !! "+"<br>"+"<br>"); 
+		}
+		else if (nombre < 6)
+		{
+		alert("Attention cette valeur est trop basse  !! "+"<br>"+"<br>"); 
+		}	
+	
+}
+
+}
+</script>
+</body>
+</html>

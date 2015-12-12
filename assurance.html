@@ -91,7 +91,7 @@ if (kilometrage < 6000)
 prime_rem2 == prime - (prime * rem2)
 } 
 
-prime_total = ( ((prime - prime_rem2) - prime_rem1) * coefp * coefu )
+prime_total = ( ((prime - prime_rem2) - (prime * prime_rem1)) * coefp * coefu )
 
 document.write("votre prime est de",prime_total," euros")
 

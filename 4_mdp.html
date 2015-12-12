@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mot de passe</title>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript"> 
+{
+document.write("Si vous souhaitez compléxifier votre mot de passe, tappez 1"+"<br>");
+document.write("Si vous souhaitez tester la robustesse de votre mot de passe, tappez 2"+"<br>"+"<br>")
+rep = parseFloat(prompt());
+
+if (rep == 1)
+{
+
+document.write("Entrez le mot de passe que vous souhaitez compléxifier :"+"<br>"+"<br>");
+mdp = prompt();
+var nmdp1 = mdp.replace(/s/gi, "5");
+console.log(nmdp1);
+var nmdp2= nmdp1.replace(/o/gi, "0");
+console.log(nmdp2);
+var nmdp3= nmdp2.replace(/l/gi, "1");
+console.log(nmdp3);
+var nmdp4= nmdp3.replace(/e/gi, "3");
+console.log(nmdp4);
+var nmdp5= nmdp4.replace(/a/gi, "4");
+console.log(nmdp5);
+var nmdp6= nmdp5.replace(/b/gi, "8");
+console.log(nmdp6);
+var nmdpf= nmdp6.replace(/g/gi, "6");
+console.log(nmdpf);
+
+document.write("Voici la modification que nous vous proposons pour améliorer la robustesse de votre mot de passe : ",nmdpf);
+
+}
+
+else if (rep == 2)
+{
+var mdp, index, i, v1mdp, v2mdp;
+index=0
+document.write("Entrez le mot de passe que vous souhaitez tester :"+"<br>"+"<br>");
+mdp = prompt();
+
+while(mdp[index] != null) 
+{
+index++; 
+}
+for(i = 0; i < index; i++) 
+{
+	if((mdp[i] >= "A") && (mdp[i] <= "Z")) 
+	{
+    v1mdp = true;
+    }
+	if(mdp[i] >= 0) 
+	{
+    v2mdp = true;
+    }
+}
+
+if((v1mdp == true) && (v2mdp == true)) 
+{
+document.write("bon mot de passe");
+}
+else
+{
+document.write("mauvais mot de passe");
+}
+
+}
+
+
+}
+
+</script>
+</body>
+</html>

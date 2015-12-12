@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Morse</title>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript"> 
+{
+
+document.write("Si vous voulez crypter des chiffes en code Morse, tappez 1"+"<br>");
+document.write("Si vous voulez décrypter un code Morse en chiffre, tappez 2"+"<br>"+"<br>")
+rep = parseFloat(prompt());
+
+if (rep == 1)
+{
+document.write("Entrez les chiffres à crypter"+"<br>"+"<br>");
+mdp = prompt();
+var nmdp1 = mdp.replace(/1/gi, "*____"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp1);
+var nmdp2= nmdp1.replace(/2/gi, "**___"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp2);
+var nmdp3= nmdp2.replace(/3/gi, "***__"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp3);
+var nmdp4= nmdp3.replace(/4/gi, "****_"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp4);
+var nmdp5= nmdp4.replace(/5/gi, "*****"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp5);
+var nmdp6= nmdp5.replace(/6/gi, "_****"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp6);
+var nmdp7= nmdp6.replace(/7/gi, "__***"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp7);
+var nmdp8= nmdp7.replace(/8/gi, "___**"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp8);
+var nmdp9= nmdp8.replace(/9/gi, "____*"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdp9);
+var nmdpf= nmdp9.replace(/0/gi, "_____"+ "&nbsp;"+ "&nbsp;"+ "-" + "&nbsp;"+ "&nbsp;");
+console.log(nmdpf);
+document.write("Voici votre code Morse :",nmdpf);
+}
+
+else if (rep == 2)
+{
+document.write("Entrez le code à décrypter (veillez à laisser un espace entre chaque section)"+"<br>"+"<br>");
+mdp = prompt();
+var nmdp1 = mdp.replace(/[*]____/gi, "1");
+console.log(nmdp1);
+var nmdp2= nmdp1.replace(/[*][*]___/gi, "2");
+console.log(nmdp2);
+var nmdp3= nmdp2.replace(/[*][*][*]__/gi, "3");
+console.log(nmdp3);
+var nmdp4= nmdp3.replace(/[*][*][*][*]_/gi, "4");
+console.log(nmdp4);
+var nmdp5= nmdp4.replace(/[*][*][*][*][*]/gi, "5");
+console.log(nmdp5);
+var nmdp6= nmdp5.replace(/_[*][*][*][*]/gi, "6");
+console.log(nmdp6);
+var nmdp7= nmdp6.replace(/__[*][*][*]/gi, "7");
+console.log(nmdp7);
+var nmdp8= nmdp7.replace(/___[*][*]/gi, "8");
+console.log(nmdp8);
+var nmdp9= nmdp8.replace(/____[*]/gi, "9");
+console.log(nmdp9);
+var nmdpf= nmdp9.replace(/_____/gi, "0");
+console.log(nmdpf);
+document.write("Voici le décryptage de votre code Morse :",nmdpf);
+}
+else 
+{
+alert("Entrez 1 ou 2  "); 
+}	
+
+}
+
+
+</script>
+</body>
+</html>
